@@ -25,7 +25,7 @@ class ESIM(object):
             return keras.layers.Embedding(
                 input_dim = input_dim,
                 output_dim = output_dim,
-                trainable = False,
+                trainable = True,
                 name = name,
                 weights = weights,
                 **kwargs)
@@ -223,3 +223,4 @@ class SoftAttention(object):
         attention_shape = inputs[0]
         sentence_shape = inputs[1]
         return (attention_shape[0], attention_shape[1], sentence_shape[2])
+    
